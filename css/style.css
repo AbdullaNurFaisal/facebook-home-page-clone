@@ -36,6 +36,12 @@ a {
     text-decoration: underline;
 }
 
+.section-main .main-left,
+.section-main .main-right,
+.section-nav {
+    position: relative;
+}
+
 /* nav */
 .section-nav {
     background-color: var(--dark-2);
@@ -43,7 +49,6 @@ a {
     padding: 7px 5px 2px 5px;
     padding-bottom: 10px;
     border-bottom: 0.5px solid rgb(68, 67, 67);
-    position: relative;
     overflow: hidden;
 
 }
@@ -159,11 +164,6 @@ a {
 .section-main .main-mid {
     position: relative; 
 };
-.section-main .main-left,
-.section-main .main-right {
-    position: fixed;
-
-}
 
 
 .section-main .main-left .list .profile-picture, 
@@ -222,7 +222,6 @@ a {
 .main-right {
     margin-top: 11px;
     justify-self: flex-end;
-    position: sticky;
 }
 .main-right .header-list > .flex, 
 .main-left .header-list > .flex {
