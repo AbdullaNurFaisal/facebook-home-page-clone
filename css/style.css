@@ -492,7 +492,7 @@ a {
 
 .post-content .time-and-visibility {
     font-size: 12px;
-    margin-top: 2px;
+    margin-top: 3px;
     margin-bottom: 25px;
 }
 .post-content .time-and-visibility a .posting-time, 
@@ -501,7 +501,12 @@ a {
 }
 .post-content .time-and-visibility .seperating-dot {
     position: relative;
-    top: -2.5px;
+    top: -3px;
+}
+.post-content .time-and-visibility svg {
+    position: relative;
+    top: 2px;
+
 }
 .post-content .post-info li:nth-child(2) {
     position: relative;
