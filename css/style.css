@@ -1,0 +1,593 @@
+:root {
+    --dark-1: #18191a;
+    --dark-2: #242526;
+    --dark-3: #3a3b3c;
+    --dark-4: #e4e6eb;
+    --dark-5: #b0b3b8;
+    --dark-6: #85868a;
+    --dark-7: #2374e1;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;  
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark-4);
+    line-height: 1.0;
+    background-color: var(--dark-1);
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--dark-4);   
+    display: inline-block;
+}
+.underlined-link:hover {
+    text-decoration: underline;
+}
+
+/* nav */
+.section-nav {
+    background-color: var(--dark-2);
+    height: 55px;
+    padding: 7px 5px 2px 5px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgb(68, 67, 67);
+    position: relative;
+    overflow: hidden;
+
+}
+.section-nav .grid-3 {
+    grid-template-columns:  300px 300px 500px;
+}
+
+.section-nav .nav-left,
+.section-nav .nav-mid,
+.section-nav .nav-right {
+    position: relative;
+}
+
+.nav-mid {
+    left: 190px;
+}
+.nav-right {
+    left: 285px;
+}
+.section-nav .nav-left img {
+    height: 40px;
+    width: 45px;
+}
+.section-nav .nav-left .search-box input[type=text] {
+    padding: 12px;
+    border-radius: 25px;
+    width: 260px;
+    background-color: var(--dark-3);
+    border: none;
+    color: var(--dark-4);
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif, FontAwesome;
+    font-size: 14px;    
+    margin-right: 170px;
+}
+.section-nav .nav-left .search-box input[type=text]::placeholder {
+    color: var(--dark-5);
+    font-weight: 100;
+}
+.section-nav .nav-left .search-box input[type=text]:focus {
+    outline: none;
+}
+.section-nav .nav-left .search-box input[type=text]:focus::placeholder {
+    color: var(--dark-6);
+}
+.section-nav .nav-mid .btn-no-hover {
+    position: relative;
+    bottom: -2.5px;
+}
+
+.section-nav .nav-mid ul {
+    position: relative;
+    right: -20px;
+}
+
+
+.section-nav .nav-mid li,
+.section-nav .nav-right li {
+    margin-right: 8px;
+}
+
+.section-nav .nav-right li:first-child .btn {
+    padding: 10px 14px;
+    border-radius: 25px;
+    margin-right: 0;
+    background-color: var(--dark-3);
+}
+.section-nav .nav-right li:first-child .btn:hover {
+    background-color: #505153;
+}
+.section-nav .nav-right li:nth-child(2) .btn {
+    margin-left: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 2px;
+    padding-right: 18px;
+    border-radius: 25px;
+
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+    margin-left: 2px;
+}
+.section-nav .nav-right .user-account .btn-circular:hover {
+    background-color: #505153;
+}
+
+
+.section-nav .nav-right .user-account .btn-circular svg {
+    position: relative;
+    bottom: 9px;    
+    right: 9px;
+} 
+
+.section-nav .nav-right li:nth-child(3) .btn-circular svg {
+    position: relative;
+    right: 8px;
+}
+
+.section-main {
+    position: relative;
+}
+.section-main .grid-3 {
+    grid-template-columns:  300px 740px 300px;
+}
+.section-main .grid {
+    align-items: flex-start;
+}
+.section-main .main-mid {
+    position: relative; 
+};
+.section-main .main-left,
+.section-main .main-right {
+    position: fixed;
+
+}
+
+
+.section-main .main-left .list .profile-picture, 
+.section-main .main-right .list .profile-picture {
+    margin-right: 8px;
+}
+.section-main .main-right .list .profile-picture {
+    border-radius: 50%;
+}
+.section-main .main-left .btn-circular, 
+.section-main .main-right .btn-circular {
+    height: 15px;
+    width: 15px;
+    padding: 15px;
+    margin-right: 6px;
+
+}
+
+.section-main .main-left .btn-circular:hover,
+.section-main .main-right .btn-circular:hover  {
+    background-color: var(--dark-3);
+}
+.section-main .main-left svg {
+    position: relative;
+    right: 7.8px;
+    top: -6px;
+}
+
+.section-main div:nth-child(2) {
+    border: none;
+}
+.section-main div:nth-child(3) {
+    border: none;
+}
+.section-main div:last-child .profile-picture {
+    border-radius: 50%;
+}
+.section-main .main-left .terms .flex {
+    flex-wrap: wrap;
+}
+.section-main .main-left .terms li {
+    position: relative;
+}
+.section-main .main-left .terms li span {
+    position: relative;
+    bottom: 3px;
+}
+.section-main .main-left .terms a, 
+.section-main .main-left .terms .copyright {
+    font-size: 12px;    
+    margin-right: 4px;
+    color: var(--dark-5);
+}
+
+
+.main-right {
+    margin-top: 11px;
+    justify-self: flex-end;
+    position: sticky;
+}
+.main-right .header-list > .flex, 
+.main-left .header-list > .flex {
+    justify-content: space-between;
+}
+.main-left .header-list > .flex {
+    align-items: center;
+}
+.main-left .header-list {
+    height: 18px;
+    margin: 15px 0;
+
+}
+.main-right .header-list h3 {
+    margin-left: 15px;
+    font-size: 17px;
+    color: var(--dark-5);
+}
+.main-left .list {
+    margin-top: 10px;
+}
+.main-left .header-list h3 {
+    font-size: 17px;
+    color: var(--dark-5);  
+    margin-left: 8px;
+    margin-top: 2px;
+}
+.main-left .shortcuts .header-list .btn {
+    padding: 8px 6px;
+    font-size: 14px;
+    color: var(--dark-7);
+    margin-right: 3px;
+    display: none;
+    position: relative;
+    left: 260px;
+    top: -24px;
+}
+.main-left .shortcuts:hover .header-list .btn {
+    display: inline-block;
+}
+.section-main .main-left, .section-main .main-right {
+    width: 300px;
+}
+
+.main-right, .main-left {
+    max-height: 92vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+.section-main .main-right:hover, 
+.section-main .main-left:hover {
+    overflow-y: scroll;
+    
+} 
+
+ .section-main .main-right:hover::-webkit-scrollbar, 
+ .section-main .main-left:hover::-webkit-scrollbar {
+    width: 8px; 
+    
+}
+
+
+.section-main .main-right:hover::-webkit-scrollbar-track, 
+.section-main .main-left:hover::-webkit-scrollbar-track {
+    background-color: var(--dark-1);
+    margin: 0;
+}
+
+.section-main .main-right:hover::-webkit-scrollbar-thumb, 
+.section-main .main-left:hover::-webkit-scrollbar-thumb  {
+    background-color: var(--dark-3);
+    border-radius: 25px;
+    
+
+}
+.section-main .list:last-child {
+    margin-left: 10px;
+}
+/* main-section right */
+.section-main .main-right {
+    margin-top: 0;
+}
+.main-right {
+    overflow-x: hidden;
+}
+.main-right .header-list {
+    margin-top: 12px;
+    height: 40px;
+}   
+
+
+.main-right .header-list li:last-child {
+    margin-right: 0;
+}
+.main-right .header-list .btn-circular {
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    position: relative;
+    background-color: var(--dark-1);
+}
+.main-right .header-list .btn-circular:hover {
+    background-color: var(--dark-3);
+}
+.main-right .header-list .btn-circular svg {
+    position: relative;
+    top: -7px;
+    left: -7px;
+}
+.main-right .header-list li:nth-child(2) svg {
+    top: -8px;  
+} 
+
+.main-right .header-list h3 {
+    position: relative;
+    top: 5px;
+    left: -4px;
+}
+.main-right .chat-functions {
+    position: relative;
+    right: -195px;
+    top: -20px;
+}
+.divider {
+    margin: 5px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.5px solid rgb(68, 67, 67);
+}
+.main-right .list:last-child i {
+    color: var(--dark-4);
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+.main-right {
+    padding-bottom: 3px;
+}
+.main-left {
+    padding-bottom: 10px;
+}
+
+/* main mid */
+.main-mid {
+    margin-top: 15px;
+}
+
+.story-button .card {
+    background-color: var(--dark-2);   
+    
+}
+.story-button .card .btn-large {
+    background-color: var(--dark-2);   
+    width: 550px;
+}
+.story-button .card .btn-large:hover {
+    background-color: var(--dark-3);
+}
+.story-button .card .btn-large h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.story-button .card .btn-large h4 {
+    font-weight: 100;
+    color: var(--dark-5);
+}
+.story-button .card .btn-large .btn-circular {
+    padding: 20px;
+    background-color: #273d58;
+
+}
+.story-button .card .btn-large .btn-circular:hover {
+    background-color: #273d58;
+}
+.story-button .card .btn-large .btn-circular i {
+    color: var(--dark-7);
+    position: relative;
+    bottom: 7px;
+    right: 7px;
+}
+.story-button .card .btn-large .story-button-content {
+    margin-left: 13px;
+}
+.status-bar {
+    width: 500px;
+    margin-bottom: 10px;    
+
+}
+.status-bar .card {
+    padding: 12px 15px 10px 15px;
+}
+
+.status-bar .profile-picture {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.status-bar .status-text .btn-large {
+    width: 450px;
+    height: 40px;
+    background-color: var(--dark-3);
+    border-radius: 25px;
+    padding: 10px;
+}
+.status-bar .status-text .btn-large h3 {
+    font-weight: 100;
+    color: var(--dark-5);
+    position: relative;
+    top: 2px;
+}
+.status-bar .status-text .btn-large:hover {
+    background-color: #505153;
+}
+.status-bar .divider {
+    margin: 10px 0;
+}
+.status-bar .status-buttons .btn {
+    border-radius: 6px;     
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--dark-5);
+    padding: 10px 20px;
+}
+.status-bar .status-buttons svg,
+.status-bar .status-buttons i {
+    margin-right: 6px;
+}
+
+.create-room .card {
+    padding-bottom: 10px;
+
+}
+.create-room li:first-child .btn {
+    padding: 8px 12px; 
+    border: 1px solid #1c4d8d;
+    border-radius: 25px;
+    margin-right: 0;
+    background-color: var(--dark-2);
+    color: #3984e7;
+}
+.create-room li:first-child .btn:hover {
+    background-color: #38393a;
+}
+.create-room li:first-child .btn h4 {
+    font-size: 15px;    
+    font-weight: 800;
+}
+.create-room li:first-child .btn i {
+    margin-right: 8px;
+}
+.create-room li {
+    margin-right: 10px;
+}
+.create-room li .profile-picture {
+    margin: 0;
+}
+
+.post i {
+    margin-right: 8px;
+}
+.post-content h4 {
+    font-size: 14px;
+
+}
+.post-content .time-and-visibility {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 25px;
+}
+.post-content .time-and-visibility a .posting-time, 
+.post-content .time-and-visibility .seperating-dot {
+    color: var(--dark-5);
+}
+.post-content .time-and-visibility .seperating-dot {
+    position: relative;
+    top: -2.5px;
+}
+.post-content .post-info li:nth-child(2) {
+    position: relative;
+    top: 8px;
+}
+.post-content .post-info li:last-child .btn-circular {
+    padding: 17px;
+    background-color: var(--dark-2);
+    position: relative;
+    left: 260px;
+    top: -10px;
+}
+.post-content .post-info li:last-child .btn-circular:hover {
+    padding: 17px;
+    background-color: var(--dark-3);
+}
+.post-content .post-info li:last-child .btn-circular svg {
+    position:relative;
+    top: -7px;
+    left: -7px;
+}
+.content-block {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.interaction-area a span {
+    color: var(--dark-5);
+    font-weight: 800;
+    font-size: 15px;
+}
+.post .divider {
+    margin: 5px 0;
+}
+.interaction-area i {
+    position: relative; 
+    top: 4px;
+}
+
+.interaction-area .flex {
+    justify-content: space-between;
+}
+.interaction-area .btn {
+    width: 230px;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+.comment-section {
+    margin-top: 8px;
+}
+
+.comment-section input[type=text] {
+    padding: 10px;
+    border-radius: 25px;
+    width: 440px;
+    background-color: var(--dark-3);
+    border: none;
+    color: var(--dark-4);
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif, FontAwesome;
+    font-size: 14px;    
+}
+.comment-section input[type=text]::placeholder {
+    color: var(--dark-5);
+    font-weight: 100;
+}
+.comment-section input[type=text]:focus {
+    outline: none;
+}
+.comment-section .profile-picture {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+}
+.attachments {
+    position: absolute;
+    z-index: 2;
+    left: 483px;
+}
+.attachments .btn-circular {
+    padding: 16px;
+}
+.attachments .btn-circular:hover {
+    background-color: #606163;   
+}
+.attachments i {
+    position: relative;
+    top: -8px;
+    left: -8px;
+}
